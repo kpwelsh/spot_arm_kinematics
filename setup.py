@@ -12,7 +12,11 @@ def main():
         author_email='kwelsh@lanl.gov',
         cmdclass = {'build_ext': build_ext_with_blas},
         ext_modules=[Extension('spot_arm_kinematics', ['ikfast_robot.cpp', 'pyikfast.cpp'], include_dirs=[np.get_include()])],
-        setup_requires=['wheel']
+        setup_requires=['wheel'],
+        install_requires=[
+            'numpy',
+            'findblas'
+        ],
     )
 
 
