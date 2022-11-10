@@ -1,0 +1,3 @@
+*.pyd
+build
+*.egg-info
